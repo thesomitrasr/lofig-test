@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Slide from "./Slide";
 import Background from "./Background";
@@ -895,8 +895,39 @@ export default function PitchDeck() {
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [currentSlide]);
 
+    // Touch Handling for Swipe
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.targetTouches[0].clientX;
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        touchEndX.current = e.targetTouches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStartX.current || !touchEndX.current) return;
+        const distance = touchStartX.current - touchEndX.current;
+        const isLeftSwipe = distance > 50;
+        const isRightSwipe = distance < -50;
+
+        if (isLeftSwipe) nextSlide();
+        if (isRightSwipe) prevSlide();
+
+        // Reset
+        touchStartX.current = 0;
+        touchEndX.current = 0;
+    };
+
     return (
-        <div className="w-full h-screen text-white overflow-hidden relative font-sans selection:bg-blue-500/30">
+        <div
+            className="w-full h-screen text-white overflow-hidden relative font-sans selection:bg-blue-500/30"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             {/* 3D Background */}
             <Background currentSlide={currentSlide} />
 
@@ -931,8 +962,24 @@ export default function PitchDeck() {
                 </AnimatePresence>
             </div>
 
-            {/* Controls */}
-            <div className="absolute bottom-16 right-8 flex gap-4 z-50">
+            {/* Mobile Controls (Side Arrows) */}
+            <button
+                onClick={prevSlide}
+                disabled={currentSlide === 0}
+                className="absolute top-1/2 left-4 -translate-y-1/2 p-4 rounded-full bg-neutral-900/50 border border-neutral-800 text-white disabled:opacity-0 transition-all z-50 md:hidden backdrop-blur-sm"
+            >
+                <ChevronLeft className="w-8 h-8" />
+            </button>
+            <button
+                onClick={nextSlide}
+                disabled={currentSlide === slides.length - 1}
+                className="absolute top-1/2 right-4 -translate-y-1/2 p-4 rounded-full bg-neutral-900/50 border border-neutral-800 text-white disabled:opacity-0 transition-all z-50 md:hidden backdrop-blur-sm"
+            >
+                <ChevronRight className="w-8 h-8" />
+            </button>
+
+            {/* Desktop Controls */}
+            <div className="absolute bottom-16 right-8 hidden md:flex gap-4 z-50">
                 <button
                     onClick={prevSlide}
                     disabled={currentSlide === 0}
