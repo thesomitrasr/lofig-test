@@ -195,15 +195,6 @@ const slides = [
                             className="p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 backdrop-blur-sm"
                             initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
                             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                            transition={{ delay: 0.4, duration: 0.8 }}
-                        >
-                            <h4 className="text-xl font-semibold mb-2 text-white">Premium Experience</h4>
-                            <p className="text-neutral-400">Clean, simple, Apple-like interface with bank-grade encryption.</p>
-                        </motion.div>
-                        <motion.div
-                            className="p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 backdrop-blur-sm"
-                            initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
-                            animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                             transition={{ delay: 0.5, duration: 0.8 }}
                         >
                             <h4 className="text-xl font-semibold mb-2 text-white">Transparent</h4>
