@@ -11,7 +11,7 @@ const slides = [
         content: (
             <>
                 <motion.h1
-                    className="text-6xl md:text-8xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
+                    className="text-5xl md:text-8xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2 }}
@@ -42,7 +42,7 @@ const slides = [
         id: 2,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8">The Problem</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-8">The Problem</h2>
                 <p className="text-xl md:text-2xl text-neutral-300 mb-12">
                     Changing your phone number or address sounds simple.<br />
                     In reality, it breaks your digital life:
@@ -57,7 +57,7 @@ const slides = [
                     ].map((item, i) => (
                         <motion.div
                             key={i}
-                            className="p-4 bg-neutral-900/50 border border-neutral-800 rounded-xl backdrop-blur-sm"
+                            className="p-4 md:p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl backdrop-blur-sm"
                             initial={{ opacity: 0, x: Math.random() * 40 - 20, y: Math.random() * 40 - 20, rotate: Math.random() * 10 - 5 }}
                             animate={{ opacity: 1, x: 0, y: 0, rotate: 0 }}
                             transition={{
@@ -88,7 +88,7 @@ const slides = [
         id: 3,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8">Why This Matters Now</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-8">Why This Matters Now</h2>
                 <div className="flex flex-col gap-4 text-left max-w-2xl mx-auto">
                     {[
                         "People switch numbers more often",
@@ -125,7 +125,7 @@ const slides = [
         id: 4,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8">The Insight</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-8">The Insight</h2>
                 <div className="space-y-8 text-xl md:text-3xl font-light leading-relaxed">
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -166,13 +166,13 @@ const slides = [
         id: 5,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-4">The Solution</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-4">The Solution</h2>
                 <h3 className="text-2xl md:text-3xl text-blue-400 mb-12">Lofig.io — The Identity Update Hub</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                     <div className="space-y-4">
                         <motion.div
-                            className="p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 backdrop-blur-sm"
+                            className="p-4 md:p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 backdrop-blur-sm"
                             initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
                             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                             transition={{ delay: 0.2, duration: 0.8 }}
@@ -181,7 +181,7 @@ const slides = [
                             <p className="text-neutral-400">Update your number or address once. Lofig pushes updates everywhere.</p>
                         </motion.div>
                         <motion.div
-                            className="p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 backdrop-blur-sm"
+                            className="p-4 md:p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 backdrop-blur-sm"
                             initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
                             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                             transition={{ delay: 0.3, duration: 0.8 }}
@@ -192,7 +192,7 @@ const slides = [
                     </div>
                     <div className="space-y-4">
                         <motion.div
-                            className="p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 backdrop-blur-sm"
+                            className="p-4 md:p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 backdrop-blur-sm"
                             initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
                             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                             transition={{ delay: 0.5, duration: 0.8 }}
@@ -226,7 +226,7 @@ const slides = [
         id: 6,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-12">How It Works</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-12">How It Works</h2>
                 <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
                     {[
                         { title: "Connect", desc: "Connect your accounts" },
@@ -236,7 +236,7 @@ const slides = [
                     ].map((step, i) => (
                         <motion.div
                             key={i}
-                            className="flex-1 p-6 bg-neutral-900/80 border border-neutral-800 rounded-2xl flex flex-col items-center backdrop-blur-sm"
+                            className="flex-1 p-4 md:p-6 bg-neutral-900/80 border border-neutral-800 rounded-2xl flex flex-col items-center backdrop-blur-sm"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 + (i * 0.15) }}
@@ -265,7 +265,7 @@ const slides = [
         id: 7,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8">Product Demo</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-8">Product Demo</h2>
                 <div className="relative w-full max-w-3xl mx-auto aspect-video bg-neutral-900 rounded-xl border border-neutral-800 overflow-hidden shadow-2xl">
                     {/* Mock UI */}
                     <div className="absolute inset-0 flex flex-col">
@@ -323,10 +323,10 @@ const slides = [
         id: 8,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-12">Market Size</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-12">Market Size</h2>
                 <div className="flex flex-col md:flex-row gap-8 items-end justify-center">
                     <motion.div
-                        className="w-full md:w-1/3 p-6 bg-neutral-900/50 rounded-2xl border border-neutral-800 backdrop-blur-sm"
+                        className="w-full md:w-1/3 p-4 md:p-6 bg-neutral-900/50 rounded-2xl border border-neutral-800 backdrop-blur-sm"
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         transition={{ delay: 0.2 }}
@@ -337,7 +337,7 @@ const slides = [
                     </motion.div>
 
                     <motion.div
-                        className="w-full md:w-1/3 p-6 bg-neutral-900/70 rounded-2xl border border-neutral-700 backdrop-blur-sm"
+                        className="w-full md:w-1/3 p-4 md:p-6 bg-neutral-900/70 rounded-2xl border border-neutral-700 backdrop-blur-sm"
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         transition={{ delay: 0.4 }}
@@ -348,7 +348,7 @@ const slides = [
                     </motion.div>
 
                     <motion.div
-                        className="w-full md:w-1/3 p-6 bg-blue-900/20 rounded-2xl border border-blue-500/30 backdrop-blur-sm"
+                        className="w-full md:w-1/3 p-4 md:p-6 bg-blue-900/20 rounded-2xl border border-blue-500/30 backdrop-blur-sm"
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         transition={{ delay: 0.6 }}
@@ -374,8 +374,8 @@ const slides = [
         id: 9,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8">Competition</h2>
-                <div className="w-full max-w-4xl overflow-hidden rounded-xl border border-neutral-800 backdrop-blur-sm">
+                <h2 className="text-3xl md:text-6xl font-bold mb-8">Competition</h2>
+                <div className="w-full max-w-4xl overflow-hidden rounded-xl border border-neutral-800 backdrop-blur-sm overflow-x-auto">
                     <table className="w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-neutral-900/80 text-neutral-400">
@@ -422,10 +422,10 @@ const slides = [
         id: 10,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-12">Business Model</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-12">Business Model</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
                     <motion.div
-                        className="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 flex flex-col backdrop-blur-sm"
+                        className="p-4 md:p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 flex flex-col backdrop-blur-sm"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
@@ -439,7 +439,7 @@ const slides = [
                     </motion.div>
 
                     <motion.div
-                        className="p-6 rounded-2xl bg-neutral-800/90 border border-blue-500 relative flex flex-col transform scale-105 shadow-2xl shadow-blue-900/20 backdrop-blur-sm"
+                        className="p-4 md:p-6 rounded-2xl bg-neutral-800/90 border border-blue-500 relative flex flex-col transform scale-105 shadow-2xl shadow-blue-900/20 backdrop-blur-sm"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
@@ -455,7 +455,7 @@ const slides = [
                     </motion.div>
 
                     <motion.div
-                        className="p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 flex flex-col backdrop-blur-sm"
+                        className="p-4 md:p-6 rounded-2xl bg-neutral-900/80 border border-neutral-800 flex flex-col backdrop-blur-sm"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
@@ -485,7 +485,7 @@ const slides = [
         id: 11,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-12">Go-To-Market Strategy</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-12">Go-To-Market Strategy</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl text-left">
                     {[
                         { title: "1. B2C", desc: "Launch simple SPA → viral through users who recently changed numbers." },
@@ -495,7 +495,7 @@ const slides = [
                     ].map((item, i) => (
                         <motion.div
                             key={i}
-                            className="p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl hover:bg-neutral-900 transition-colors backdrop-blur-sm"
+                            className="p-4 md:p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl hover:bg-neutral-900 transition-colors backdrop-blur-sm"
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.2 + (i * 0.1) }}
@@ -513,7 +513,7 @@ const slides = [
         id: 12,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8">Roadmap & Research</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-8">Roadmap & Research</h2>
                 <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
                     {/* Timeline */}
                     <div className="flex-1 space-y-4">
@@ -557,7 +557,7 @@ const slides = [
                     <div className="flex-1 flex flex-col gap-6">
                         {/* Graph */}
                         <motion.div
-                            className="flex-1 bg-neutral-900/50 border border-neutral-800 rounded-xl p-6 relative overflow-hidden flex flex-col backdrop-blur-sm"
+                            className="flex-1 bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 md:p-6 relative overflow-hidden flex flex-col backdrop-blur-sm"
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4 }}
@@ -610,7 +610,7 @@ const slides = [
 
                         {/* Verified Research Links */}
                         <motion.div
-                            className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-6 text-left backdrop-blur-sm"
+                            className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 md:p-6 text-left backdrop-blur-sm"
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.5 }}
@@ -641,7 +641,7 @@ const slides = [
         id: 13,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8">Vision</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-8">Vision</h2>
                 <motion.p
                     className="text-2xl md:text-3xl font-light mb-12"
                     initial={{ opacity: 0 }}
@@ -686,7 +686,7 @@ const slides = [
         id: 14,
         content: (
             <>
-                <h2 className="text-4xl md:text-6xl font-bold mb-4">Financial Ask</h2>
+                <h2 className="text-3xl md:text-6xl font-bold mb-4">Financial Ask</h2>
                 <motion.div
                     className="text-6xl md:text-8xl font-bold text-blue-500 mb-12"
                     initial={{ scale: 0.8, opacity: 0 }}
@@ -740,7 +740,7 @@ const slides = [
         content: (
             <>
                 <motion.h1
-                    className="text-6xl md:text-8xl font-bold tracking-tighter mb-8"
+                    className="text-5xl md:text-8xl font-bold tracking-tighter mb-8"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
@@ -779,8 +779,8 @@ function InvestorSlide() {
 
     return (
         <>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8">Invest in Lofig.io</h2>
-            <div className="flex flex-col lg:flex-row gap-12 w-full max-w-6xl">
+            <h2 className="text-3xl md:text-6xl font-bold mb-8">Invest in Lofig.io</h2>
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full max-w-6xl">
                 {/* Left Column: Returns Slider & Transparency */}
                 <motion.div
                     className="flex-1 text-left space-y-8"
@@ -789,7 +789,7 @@ function InvestorSlide() {
                     transition={{ delay: 0.2 }}
                 >
                     {/* Returns Slider */}
-                    <div className="p-6 bg-neutral-900/80 rounded-2xl border border-blue-500/30 shadow-lg shadow-blue-900/10 backdrop-blur-sm">
+                    <div className="p-4 md:p-6 bg-neutral-900/80 rounded-2xl border border-blue-500/30 shadow-lg shadow-blue-900/10 backdrop-blur-sm">
                         <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                             <TrendingUp className="w-5 h-5 text-blue-400" /> Potential Return (2028)
                         </h3>

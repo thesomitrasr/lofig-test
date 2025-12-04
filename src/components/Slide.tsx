@@ -12,7 +12,7 @@ const Slide: React.FC<SlideProps> = ({ children, className, isActive }) => {
   return (
     <motion.div
       className={cn(
-        "w-full h-full flex flex-col items-center justify-center p-8 text-center overflow-y-auto no-scrollbar",
+        "w-full h-full flex flex-col items-center justify-center p-4 md:p-8 text-center overflow-y-auto no-scrollbar",
         className
       )}
       initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
